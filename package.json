@@ -1,6 +1,6 @@
 {
   "name": "hexo-generator-sitemap2",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Sitemap generator plugin for Hexo",
   "main": "index",
   "scripts": {

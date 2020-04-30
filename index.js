@@ -14,7 +14,9 @@ if (!extname(config.path)) {
   config.path += '.xml';
 }
 
-hexo.extend.generator.register('sitemap', require('./lib/generator'));
+hexo.on('generateBefore', function(post){
+  hexo.extend.generator.register('lazy-sitemap', require('./lib/generator'));
+})
 
 if (config.rel === true) {
   hexo.extend.filter.register('after_render:html', require('./lib/rel'));
